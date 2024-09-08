@@ -82,7 +82,14 @@ source $ZSH/oh-my-zsh.sh
 
 # Add neovim to path
 export PATH="$PATH:/opt/nvim-linux64/bin"
-
+# Add snap apps to path
+export PATH="$PATH:/snap/bin"
+# Cargo thing?
+. "$HOME/.cargo/env"
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
