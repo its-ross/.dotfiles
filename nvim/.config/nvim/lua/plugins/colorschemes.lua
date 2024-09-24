@@ -44,6 +44,8 @@ return {
         overrides = {
           ["@variable.builtin"] = { fg = colors.constant },
           ["@variable.parameter"] = { fg = colors.fg, italic = true },
+          ["@constructor.python"] = { fg = colors.entity },
+          ["@type.builtin.python"] = { fg = colors.entity },
         },
       })
       vim.g.ayu_italic_comment = true
