@@ -10,27 +10,28 @@ return {
       -- vim.cmd.colorscheme("everforest")
     end,
   },
-  -- {
-  --   "neanias/everforest-nvim",
-  --   version = false,
-  --   lazy = false,
-  --   priority = 1000, -- make sure to load this before all the other start plugins
-  --   -- Optional; default configuration will be used if setup isn't called.
-  --   config = function()
-  --     vim.g.everforest_enable_italic = true
-  --     vim.cmd.colorscheme("everforest")
-  --   end,
-  -- },
   {
-    "catppuccin/nvim",
+    "sainnhe/edge",
     lazy = false,
     priority = 1000,
-    name = "catppuccin",
     config = function()
-      -- vim.cmd.colorscheme("catppuccin")
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.edge_enable_italic = true
+      -- vim.cmd.colorscheme("edge")
     end,
   },
-  -- { "EdenEast/nightfox.nvim" },
+  {
+    "sainnhe/sonokai",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- Optionally configure and load the colorscheme
+      -- directly inside the plugin declaration.
+      vim.g.sonokai_enable_italic = true
+      -- vim.cmd.colorscheme("sonokai")
+    end,
+  },
   {
     "Shatur/neovim-ayu",
     lazy = false,
@@ -50,7 +51,27 @@ return {
       })
       vim.g.ayu_italic_comment = true
       vim.g.ayu_italic_parameter = true
-      vim.cmd.colorscheme("ayu")
+      -- vim.cmd.colorscheme("ayu")
     end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme("kanagawa")
+    end,
+  },
+  {
+    "its-ross/melange-nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme("melange")
+    end,
+  },
+  {
+    "olimorris/onedarkpro.nvim",
+    priority = 1000, -- Ensure it loads first
   },
 }
