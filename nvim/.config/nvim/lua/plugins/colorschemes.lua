@@ -11,28 +11,6 @@ return {
     end,
   },
   {
-    "sainnhe/edge",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.edge_enable_italic = true
-      -- vim.cmd.colorscheme("edge")
-    end,
-  },
-  {
-    "sainnhe/sonokai",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- Optionally configure and load the colorscheme
-      -- directly inside the plugin declaration.
-      vim.g.sonokai_enable_italic = true
-      -- vim.cmd.colorscheme("sonokai")
-    end,
-  },
-  {
     "Shatur/neovim-ayu",
     lazy = false,
     priority = 1000,
@@ -55,24 +33,13 @@ return {
     end,
   },
   {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme("kanagawa")
-    end,
-  },
-  {
     "its-ross/melange-nvim",
     lazy = false,
     priority = 1000,
     config = function()
+      vim.opt.termguicolors = true
       vim.cmd.colorscheme("melange")
     end,
-  },
-  {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first
   },
   {
     "rockyzhang24/arctic.nvim",

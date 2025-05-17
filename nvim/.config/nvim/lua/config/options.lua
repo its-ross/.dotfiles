@@ -9,3 +9,4 @@ vim.g.lazyvim_python_lsp = "pyright"
 -- vim.g.lazyvim_python_lsp = "ruff-lsp"
 -- Set to "ruff_lsp" to use the old LSP implementation version.
 vim.g.lazyvim_python_ruff = "ruff"
+vim.g.snacks_animate = false
