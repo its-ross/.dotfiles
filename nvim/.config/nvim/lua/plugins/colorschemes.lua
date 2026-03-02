@@ -7,7 +7,7 @@ return {
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.everforest_enable_italic = true
-      -- vim.cmd.colorscheme("everforest")
+      vim.cmd.colorscheme("everforest")
     end,
   },
   {
@@ -38,7 +38,7 @@ return {
     priority = 1000,
     config = function()
       vim.opt.termguicolors = true
-      vim.cmd.colorscheme("melange")
+      -- vim.cmd.colorscheme("melange")
     end,
   },
   {
@@ -57,4 +57,5 @@ return {
       -- vim.cmd.colorscheme("gruvbox-material")
     end,
   },
+  { "miikanissi/modus-themes.nvim", priority = 1000 },
 }

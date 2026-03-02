@@ -4,9 +4,11 @@
 -- LSP Server to use for Python.
 -- Set to "basedpyright" to use basedpyright instead of pyright.
 -- vim.g.lazyvim_python_lsp = "pylsp"
--- vim.g.lazyvim_python_lsp = "basedpyright"
-vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_lsp = "basedpyright"
+-- vim.g.lazyvim_python_lsp = "pyright"
 -- vim.g.lazyvim_python_lsp = "ruff-lsp"
 -- Set to "ruff_lsp" to use the old LSP implementation version.
-vim.g.lazyvim_python_ruff = "ruff"
+-- vim.g.lazyvim_python_ruff = "ruff"
+-- vim.g.lazyvim_python_lsp = "pyrefly"
+-- vim.g.lazyvim_python_lsp = "ty"
 vim.g.snacks_animate = false
