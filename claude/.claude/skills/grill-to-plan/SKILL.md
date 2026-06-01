@@ -1,6 +1,6 @@
 ---
 name: grill-to-plan
-description: Staff Engineer grill-to-plan skill. Adversarially probes feature proposals for edge cases, scalability, security, and technical debt with one question at a time. Produces a structured markdown implementation plan only when you say "AGREED ON PLAN". Use when designing a feature before writing any code.
+description: Staff Engineer grill-to-plan skill. Adversarially probes feature proposals for edge cases, scalability, security, and technical debt with one question at a time. Produces a structured markdown implementation plan only when you have completed questioning and have a clear idea of the requirements. Use when designing a feature before writing any code.
 model: opus
 ---
 
