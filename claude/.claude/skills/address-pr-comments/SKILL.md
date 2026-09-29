@@ -1,3 +1,8 @@
+---
+name: address-pr-comments
+description: For the current branch please review the open PR comments.
+---
+
 For the current branch please review the open PR comments.
 
 Don't automatically agree with the PR comments, review the feedback with a critical eye with your knowledge of the bigger picture and architecture of the system.
