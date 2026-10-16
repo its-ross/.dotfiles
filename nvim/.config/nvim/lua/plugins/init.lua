@@ -17,15 +17,22 @@ return {
   { import = "nvchad.blink.lazyspec" },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/nvim-treesitter",
     branch = "master",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc", "python", "c", "cpp", 
-  		},
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "python",
+        "c",
+        "cpp",
+        "markdown",
+        "markdown_inline",
+      },
       highlight = {
         enabled = true,
-      }
-  	},
+      },
+    },
   },
 }
