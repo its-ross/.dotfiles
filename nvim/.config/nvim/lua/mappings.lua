@@ -8,6 +8,12 @@ local map = vim.keymap.set
 map("n", "<leader>qq", "<cmd>confirm qa<CR>", { desc = "Quit Neovim" })
 -- Toggle NvimTree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree toggle window" })
+-- Disable NvChad buffer navigation shortcuts
+local nomap = vim.keymap.del
+
+nomap("n", "<tab>")
+nomap("n", "<S-tab>")
+nomap("n", "<leader>b")
 -- Prev/Next buffer shortcuts
 map("n", "<S-l>", function()
   require("nvchad.tabufline").next()
@@ -16,6 +22,19 @@ end, { desc = "buffer goto next" })
 map("n", "<S-h>", function()
   require("nvchad.tabufline").prev()
 end, { desc = "buffer goto prev" })
+-- Close all other listed buffers
+map("n", "<leader>bo", function()
+local current = vim.api.nvim_get_current_buf()
+
+for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+if buf ~= current and vim.api.nvim_buf_is_valid(buf)
+and vim.bo[buf].buflisted then
+pcall(vim.api.nvim_buf_delete, buf, { force = false })
+end
+end
+end, {
+desc = "Delete Other Buffers",
+})
 -- Git history of the current file (opens a visual diff split of past commits)
 map("n", "<leader>gf", function()
   require("gitsigns").setqflist("all") -- Loads all commits for this file into the Quickfix list
